@@ -29,8 +29,7 @@ $(function(){
   		    }
   			console.log(channel);
 			channel.bind('new', function(post) {
-			  console.log("deu!");
-			  $("#requests").html("received");
+			  $("#requests").append(post);
 			});
 	}
 

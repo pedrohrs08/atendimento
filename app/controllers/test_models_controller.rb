@@ -5,7 +5,6 @@ class TestModelsController < ApplicationController
   # GET /test_models.json
   def index
     @test_models = TestModel.all
-    WebsocketRails['requests'].trigger('new', "oi pessoa!")
   end
 
   # GET /test_models/1
