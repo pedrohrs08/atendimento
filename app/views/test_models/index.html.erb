@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Test Models</h1>
+<h1>Solicitações Recebidas</h1>
 
 <table>
   <thead>
@@ -11,22 +11,12 @@
   </thead>
 
   <tbody>
-    <% @test_models.each do |test_model| %>
-      <tr>
-        <td><%= test_model.name %></td>
-        <td><%= link_to 'Show', test_model %></td>
-        <td><%= link_to 'Edit', edit_test_model_path(test_model) %></td>
-        <td><%= link_to 'Destroy', test_model, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
+    <div id="requests" style="boder: 1px solid black">
+      
+    </div>
   </tbody>
 </table>
 
 <br>
 
 <%= link_to 'New Test model', new_test_model_path %>
-
-<h5>Requests so Far:</h5>
-<div id="requests">
-  
-</div>

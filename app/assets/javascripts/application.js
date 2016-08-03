@@ -28,7 +28,14 @@ $(function(){
   		    }
   			console.log(channel);
 			channel.bind('new', function(post) {
-			  $("#requests").append(post + "<br>");
+			  var url = "http://doadores-env.ewmarezs3y.sa-east-1.elasticbeanstalk.com/donors/"	
+			  url = url + post["id"]
+			  $.get( url, function( data ) {
+				  $("#requests").append("<label id='donor'>" + data["name"] + "</label>" +
+                    "<label id='reason'>" + post["reason"] + "</label>" +
+                    "<a href='#'>Atender e Faturar</a>"
+				  	"<br>");
+			  });
 			});
 	}
 
