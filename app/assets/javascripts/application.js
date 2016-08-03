@@ -17,7 +17,6 @@
 //= require websocket_rails/main
 
 $(function(){
-	alert('ready');
 	var dispatcher = new WebSocketRails(window.location.host + '/websocket');
 
 
@@ -29,7 +28,7 @@ $(function(){
   		    }
   			console.log(channel);
 			channel.bind('new', function(post) {
-			  $("#requests").append(post);
+			  $("#requests").append(post + "<br>");
 			});
 	}
 
